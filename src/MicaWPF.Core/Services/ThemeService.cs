@@ -47,8 +47,8 @@ public class ThemeService : IThemeService
         IsThemeAware = windowsTheme == WindowsTheme.Auto;
         CurrentTheme = windowsTheme == WindowsTheme.Auto ? WindowsThemeHelper.GetCurrentWindowsTheme() : windowsTheme;
 
-        _accentColorService?.RefreshAccentsColors();
-        MicaWPFServiceUtility.ThemeDictionaryService.ThemeSource = WindowsThemeHelper.WindowsThemeToResourceTheme(CurrentTheme);
+        // _accentColorService?.RefreshAccentsColors();
+        // MicaWPFServiceUtility.ThemeDictionaryService.ThemeSource = WindowsThemeHelper.WindowsThemeToResourceTheme(CurrentTheme);
 
         lock (BackdropEnabledWindows)
         {
@@ -91,7 +91,7 @@ public class ThemeService : IThemeService
             return;
         }
 
-        window.Background = new SolidColorBrush(Color.FromArgb(0, 255, 255, 255));
+        // window.Background = new SolidColorBrush(Color.FromArgb(0, 255, 255, 255));
         var windowHandle = new WindowInteropHelper(window).Handle;
 
         if (CurrentTheme == WindowsTheme.Dark)

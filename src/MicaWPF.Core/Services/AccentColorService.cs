@@ -25,9 +25,9 @@ public class AccentColorService : IAccentColorService
 
     public AccentColorService()
     {
-        UpdateAccentsColorsFromWindows();
-        IsTitleBarAndWindowsBorderColored = WindowsAccentHelper.AreTitleBarAndBordersAccented();
-        IsTitleBarAndBorderAccentAware = true;
+        // UpdateAccentsColorsFromWindows();
+        // IsTitleBarAndWindowsBorderColored = WindowsAccentHelper.AreTitleBarAndBordersAccented();
+        // IsTitleBarAndBorderAccentAware = true;
     }
 
     public virtual WindowsAccentHelper WindowsAccentHelper { get; } = new WindowsAccentHelper();
@@ -126,12 +126,12 @@ public class AccentColorService : IAccentColorService
             _isCheckingTitleBarAndBorderAccent = true;
             if (OsHelper.IsWindows10_OrGreater && IsTitleBarAndBorderAccentAware)
             {
-                SystemEvents.UserPreferenceChanged += SystemEventsUserPreferenceChanged;
+                // SystemEvents.UserPreferenceChanged += SystemEventsUserPreferenceChanged;
             }
         }
         else if (!IsTitleBarAndBorderAccentAware && _isCheckingTitleBarAndBorderAccent)
         {
-            SystemEvents.UserPreferenceChanged -= SystemEventsUserPreferenceChanged;
+            // SystemEvents.UserPreferenceChanged -= SystemEventsUserPreferenceChanged;
             _isCheckingTitleBarAndBorderAccent = false;
         }
     }
