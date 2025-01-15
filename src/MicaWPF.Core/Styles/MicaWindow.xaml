@@ -350,6 +350,15 @@
                                                 Focusable="False"
                                                 RenderOptions.BitmapScalingMode="HighQuality"
                                                 Source="{TemplateBinding Icon}" />
+                                        </StackPanel>
+                                        <StackPanel
+                                            Margin="5,0,5,0"
+                                            DockPanel.Dock="Right"
+                                            Orientation="Horizontal">
+                                            <ContentControl
+                                                Content="{TemplateBinding TitleBarContent}"
+                                                Focusable="False"
+                                                WindowChrome.IsHitTestVisibleInChrome="True" />
                                             <TextBlock
                                                 x:Name="TitleTextBlock"
                                                 Margin="5,0,0,0"
@@ -359,12 +368,6 @@
                                                 Foreground="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:MicaWindowBase}}"
                                                 Text="{TemplateBinding Title}" />
                                         </StackPanel>
-                                        <ContentControl
-                                            Margin="5,0,5,0"
-                                            Content="{TemplateBinding TitleBarContent}"
-                                            DockPanel.Dock="Right"
-                                            Focusable="False"
-                                            WindowChrome.IsHitTestVisibleInChrome="True" />
                                     </DockPanel>
                                     <StackPanel
                                         x:Name="TitleButtonStackPanel"
