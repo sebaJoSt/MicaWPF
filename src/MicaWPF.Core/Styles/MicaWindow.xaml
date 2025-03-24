@@ -431,6 +431,7 @@
                                             </Button>
                                         </Grid>
                                         <Button
+                                            Height="32"
                                             Command="{Binding Source={x:Static SystemCommands.CloseWindowCommand}}"
                                             Focusable="False"
                                             Style="{StaticResource MicaWPF.Core.Styles.Default.MicaWindow.Button.Close}">
@@ -504,7 +505,7 @@
                             </MultiDataTrigger.Conditions>
                             <Setter TargetName="Maximize" Property="Visibility" Value="Collapsed" />
                             <Setter TargetName="Restore" Property="Visibility" Value="Collapsed" />
-                            <Setter TargetName="Minimize" Property="Visibility" Value="Hidden" />
+                            <Setter TargetName="Minimize" Property="Visibility" Value="Collapsed" />
                         </MultiDataTrigger>
                         <Trigger Property="WindowStyle" Value="None">
                             <Setter TargetName="TitleGrid" Property="Visibility" Value="Collapsed" />
@@ -512,7 +513,7 @@
                         <Trigger Property="WindowStyle" Value="ToolWindow">
                             <Setter TargetName="Maximize" Property="Visibility" Value="Collapsed" />
                             <Setter TargetName="Restore" Property="Visibility" Value="Collapsed" />
-                            <Setter TargetName="Minimize" Property="Visibility" Value="Hidden" />
+                            <Setter TargetName="Minimize" Property="Visibility" Value="Collapsed" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
